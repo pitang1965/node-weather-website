@@ -61,3 +61,7 @@ button {
 button:hover {
     background: #FF7A15
 }
+
+a img:hover {
+    box-shadow: 0 0 8px gray;
+}

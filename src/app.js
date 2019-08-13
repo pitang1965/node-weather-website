@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -30,7 +31,8 @@ app.get('', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', {
         title: '作成者について',
-        name: 'ピータン1965'
+        name: 'ピータン1965',
+        description: '2019年1月からWeb開発の勉強を開始した50代です。イラストは小学生の娘が描きました。よろしければクリックしてください。'
     })
 })
 
@@ -38,7 +40,7 @@ app.get('/help', (req, res) => {
     res.render('help', {
         title: 'ヘルプ',
         name: 'ピータン1965',
-        helpText: '私はあなたを助けるでしょう。'
+        helpText: 'weather?address=新宿 といったURLでJSONを返します。'
     })
 })
 
@@ -95,6 +97,6 @@ app.get('*', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('Server is up on oprt 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
