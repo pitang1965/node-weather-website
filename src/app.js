@@ -24,22 +24,21 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'ピータンの天気予報',
-        name: 'ピータン1965'
+        name: 'pitang1965'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: '作成者について',
-        name: 'ピータン1965',
-        description: '2019年1月からWeb開発の勉強を開始した50代です。イラストは小学生の娘が描きました。よろしければクリックしてください。'
+        title: 'サイト情報',
+        name: 'pitang1965'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'ヘルプ',
-        name: 'ピータン1965',
+        name: 'pitang1965',
         helpText: 'weather?address=新宿 といったURLでJSONを返します。'
     })
 })
