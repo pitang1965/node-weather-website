@@ -63,7 +63,7 @@ app.get('/weather', (req, res) => {
 
         
     
-        forecast(latitude, longtitude, (error, {summary, temperature, probability}) => {
+        forecast(latitude, longtitude, (error, {summary, temperatureMin, temperatureMax, temperatureCurrent, probability}) => {
             if (error) {
                 return res.send({
                     error
@@ -72,7 +72,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 address,
                 location,
-                forecast: location + ' の天気予報をお伝えします。' + summary + '現在の気温は' + temperature + '℃、降水確率は' + probability +' %です。'
+                forecast: 'まず、初めに概況です。' + summary + '今日の最低気温は' + temperatureMin + '℃、最高気温は' + temperatureMax + '℃です。現在の気温は' + temperatureCurrent + '℃、降水確率は' + probability +' %です。'
             })
         })
     })
