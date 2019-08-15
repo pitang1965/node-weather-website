@@ -72,7 +72,7 @@ app.get('/weather', (req, res) => {
             res.send({
                 address,
                 location,
-                forecast: 'まず、初めに概況です。' + summary + '今日の最低気温は' + temperatureMin + '℃、最高気温は' + temperatureMax + '℃です。現在の気温は' + temperatureCurrent + '℃、降水確率は' + probability +' %です。'
+                forecast: 'まず、初めに概況です。' + summary + '今日の最低気温は' + temperatureMin + '℃、最高気温は' + temperatureMax + '℃です。現在の気温は' + temperatureCurrent + '℃、降水確率は' + probability +'%です。'
             })
         })
     })
