@@ -1,8 +1,8 @@
 const request = require('request')
 
 const geocode = (address, callback) => {
-    const mapBoxAccessToken = 'pk.eyJ1IjoicGl0YW5nMTk2NSIsImEiOiJjank3NXFlb3Qwa3JtM3FwdDR4NXU5ZmJkIn0.XvsnmRCwb0SABsswuKIjpQ' // 秘密です
-    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(address) + '.json?access_token=' + mapBoxAccessToken + '&limit=1&language=ja'
+    const mapBoxAccessToken = process.env.MAPBOX_ACCESS_TOKEN
+    const url = process.env.MAPBOX_GEOCODING_URL + encodeURIComponent(address) + '.json?access_token=' + mapBoxAccessToken + '&limit=1&language=ja'
 
     request ( {url: url, json: true}, (error, { body }) => {
         if (error) {

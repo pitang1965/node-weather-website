@@ -6,7 +6,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -38,8 +38,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'ヘルプ',
-        name: 'pitang1965',
-        helpText: 'weather?address=新宿 といったURLでJSONを返します。'
+        name: 'pitang1965'
     })
 })
 
@@ -60,9 +59,6 @@ app.get('/weather', (req, res) => {
             })
         }
 
-
-        
-    
         forecast(latitude, longtitude, (error, {summary, temperatureMin, temperatureMax, temperatureCurrent, probability}) => {
             if (error) {
                 return res.send({
