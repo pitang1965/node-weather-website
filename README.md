@@ -1,6 +1,7 @@
 # node-weather-website
 Node.jsによる簡単な天気予報Webサイト
 Node.jsの学習のために作ったものです。
+![天気予報](https://user-images.githubusercontent.com/47315420/93012424-44416200-f5db-11ea-992b-49cf9e40a948.gif)
 
 # DEMO
 https://pitang1965-weather-application.herokuapp.com/
