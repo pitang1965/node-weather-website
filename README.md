@@ -19,7 +19,7 @@ Node.js 及び下記パッケージ/モジュールを使用しています。
 * [mapbox](https://www.mapbox.com/)
  
 # Installation
-ローカルで実行する場合は、config/dev.envファイルをさ作成し、以下を記述してください。
+ローカルで実行する場合は、config/dev.envファイルを作成し、以下を記述してください。
 ```
 PORT=3000
 DARKSKY_NET_API_KEY=https://api.darksky.net/forecast/********************************/
