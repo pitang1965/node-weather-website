@@ -1,67 +1,97 @@
 * {
-    font-family: Circular, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "MS Gothic", "ＭＳ ゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Circular, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro',
+    メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', 'MS Gothic',
+    'ＭＳ ゴシック', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body { 
+  background-color: #A2DAFF;
+  color: #333333;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url(../img/cloud1.svg);
+
+  animation-name: waveAnimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
 
-body {
-    color:#333333;
-    max-width: 650px;
-    margin: 0 auto;
-    padding: 0 16px;
-
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+@keyframes waveAnimation {
+  20% {
+    background-image: url(../img/cloud2.svg);
+  }
+  40% {
+    background-image: url(../img/cloud3.svg);
+  }
+  60% {
+    background-image: url(../img/cloud4.svg);
+  }
+  80% {
+    background-image: url(../img/cloud5.svg);
+  }
 }
 
 .main-content {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
 }
 
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+  margin-top: 16px;
+  margin-bottom: 48px;
 }
 
 h1 {
-    font-size: 64px;
-    margin-bottom: 16px;
+  font-size: 64px;
+  margin-bottom: 16px;
 }
 
 header a {
-    color: #888888;
-    margin-right: 16px;
-    text-decoration: none;
+  color: #888888;
+  margin-right: 16px;
+  text-decoration: none;
 }
 
 .portrait {
-    width: 250px;
+  width: 250px;
 }
 
 input {
-    border: 1px solid #a9a9a9;
-    padding: 8px;
+  border: 1px solid #a9a9a9;
+  padding: 8px;
 }
 
 button {
-    cursor: pointer;
-    border: 1px solid #0160C3;
-    background: #0470de;
-    color: white;
-    border-radius: 4px;
-    padding: 8px;
+  cursor: pointer;
+  border: 1px solid #0160c3;
+  background: #0470de;
+  color: white;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 button:hover {
-    background: #FF7A15
+  background: #ff7a15;
 }
 
 a img:hover {
-    box-shadow: 0 0 8px gray;
+  box-shadow: 0 0 8px gray;
 }
